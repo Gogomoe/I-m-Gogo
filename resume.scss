@@ -1,5 +1,33 @@
 $primeColor: #428cdd;
 
+@media print {
+
+  body {
+    font-size: 15px !important;
+  }
+
+  .landing {
+    max-height: 600px !important;
+  }
+
+  .resume {
+    width: 85% !important;
+  }
+
+  .resume-box {
+    padding: 80px 0 40px !important;
+  }
+
+  .profile {
+    padding: 2em 3em !important;
+  }
+
+  .resume {
+    min-height: 0 !important;
+  }
+
+}
+
 body {
   margin: 0;
   font-size: 18px;
