@@ -3,27 +3,33 @@ $primeColor: #428cdd;
 @media print {
 
   body {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
 
   .landing {
-    max-height: 600px !important;
+    display: none !important;
+  }
+
+  .resume-box {
+    padding: 40px 0 20px !important;
   }
 
   .resume {
     width: 85% !important;
-  }
-
-  .resume-box {
-    padding: 80px 0 40px !important;
-  }
-
-  .profile {
-    padding: 2em 3em !important;
+    border: none !important;
   }
 
   .resume {
     min-height: 0 !important;
+  }
+
+  .profile, .information, .experience {
+    color: black !important;
+    padding: 0.5em 0em !important;
+  }
+
+  .profile img {
+    display: none !important;
   }
 
 }
@@ -105,16 +111,18 @@ body {
   color: white;
   background-color: $primeColor;
 
+  display: flex;
+
   img {
     height: 6em;
-    float: left;
     border-radius: 50%;
+    margin-right: 3em;
   }
 
   .text-block {
-    padding-left: 8em;
 
     h1 {
+      font-size: 1.4em;
       margin: 0;
     }
 
@@ -125,8 +133,22 @@ body {
   }
 }
 
-.experience {
+.experience, .information {
   padding: 1em 2em;
+
+  .value-table {
+    .item {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .key {
+      min-width: 160px;
+    }
+  }
+}
+
+.experience {
 
   h2 {
     margin: 0.4em 0;
