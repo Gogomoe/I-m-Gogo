@@ -1,26 +1,37 @@
 @media print {
   body {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
 
   .landing {
-    max-height: 600px !important;
-  }
-
-  .resume {
-    width: 85% !important;
+    display: none !important;
   }
 
   .resume-box {
-    padding: 80px 0 40px !important;
+    padding: 40px 0 0 !important;
   }
 
-  .profile {
-    padding: 2em 3em !important;
-  }
-
-  .resume {
+  .resume, .footer {
     min-height: 0 !important;
+    width: 90% !important;
+    border: none !important;
+  }
+
+  .profile, .information, .experience {
+    color: black !important;
+    padding: 0.5em 0 !important;
+  }
+
+  .profile img {
+    display: none !important;
+  }
+
+  h1, h2, h3, p, a {
+    break-inside: avoid !important;
+  }
+
+  .on-print {
+    display: block !important;
   }
 }
 body {
@@ -95,16 +106,15 @@ body {
   padding: 5vh 3em 2em;
   color: white;
   background-color: #428cdd;
+  display: flex;
 }
 .profile img {
   height: 6em;
-  float: left;
   border-radius: 50%;
-}
-.profile .text-block {
-  padding-left: 8em;
+  margin-right: 3em;
 }
 .profile .text-block h1 {
+  font-size: 1.4em;
   margin: 0;
 }
 .profile .text-block p {
@@ -112,24 +122,42 @@ body {
   font-weight: normal;
 }
 
-.experience {
+.experience, .information {
   padding: 1em 2em;
 }
-.experience h2 {
+.experience h2, .information h2 {
   margin: 0.4em 0;
 }
-.experience h3, .experience p {
+.experience h3, .experience p, .information h3, .information p {
   margin: 0.3em 0;
 }
-.experience h3 {
+.experience h3, .information h3 {
   font-size: 1.05em;
   font-weight: normal;
 }
-.experience p {
+.experience p, .information p {
   padding-left: 2em;
 }
-.experience .text-hide {
+.experience .text-hide, .information .text-hide {
   color: rgba(0, 0, 0, 0);
+}
+.experience .value-table .item, .information .value-table .item {
+  display: flex;
+  align-items: baseline;
+}
+.experience .value-table .key, .information .value-table .key {
+  min-width: 160px;
+}
+
+.footer-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.on-print {
+  display: none;
 }
 
 /*# sourceMappingURL=resume.css.map */
