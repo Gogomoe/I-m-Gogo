@@ -3,7 +3,7 @@ $primeColor: #428cdd;
 @media print {
 
   body {
-    font-size: 14px !important;
+    font-size: 15px !important;
   }
 
   .landing {
@@ -25,14 +25,19 @@ $primeColor: #428cdd;
 
   .profile, .information, .experience {
     color: black !important;
-    padding: 0.5em 0em !important;
+    padding: 0.5em 0 !important;
   }
 
   .profile img {
     display: none !important;
   }
 
+  h1, h2, h3, p, a {
+    break-inside: avoid !important;
+  }
+
 }
+
 
 body {
   margin: 0;
