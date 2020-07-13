@@ -3,30 +3,42 @@ $primeColor: #428cdd;
 @media print {
 
   body {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
 
   .landing {
-    max-height: 600px !important;
-  }
-
-  .resume {
-    width: 85% !important;
+    display: none !important;
   }
 
   .resume-box {
-    padding: 80px 0 40px !important;
+    padding: 40px 0 0 !important;
   }
 
-  .profile {
-    padding: 2em 3em !important;
-  }
-
-  .resume {
+  .resume, .footer {
     min-height: 0 !important;
+    width: 90% !important;
+    border: none !important;
+  }
+
+  .profile, .information, .experience {
+    color: black !important;
+    padding: 0.5em 0 !important;
+  }
+
+  .profile img {
+    display: none !important;
+  }
+
+  h1, h2, h3, p, a {
+    break-inside: avoid !important;
+  }
+
+  .on-print {
+    display: block !important;
   }
 
 }
+
 
 body {
   margin: 0;
@@ -38,6 +50,10 @@ body {
 .ai {
   font-weight: bold;
   transform: scale(0.9);
+}
+
+a, a:visited {
+  color: #428cdd;
 }
 
 .landing {
@@ -105,16 +121,18 @@ body {
   color: white;
   background-color: $primeColor;
 
+  display: flex;
+
   img {
     height: 6em;
-    float: left;
     border-radius: 50%;
+    margin-right: 3em;
   }
 
   .text-block {
-    padding-left: 8em;
 
     h1 {
+      font-size: 1.4em;
       margin: 0;
     }
 
@@ -125,7 +143,7 @@ body {
   }
 }
 
-.experience {
+.experience, .information {
   padding: 1em 2em;
 
   h2 {
@@ -148,4 +166,26 @@ body {
   .text-hide {
     color: rgba(0, 0, 0, 0);
   }
+
+  .value-table {
+    .item {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .key {
+      min-width: 160px;
+    }
+  }
+}
+
+.footer-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.on-print {
+  display: none;
 }
