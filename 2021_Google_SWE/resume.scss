@@ -22,7 +22,15 @@ $primeColor: #428cdd;
 
   .profile, .information, .experience {
     color: black !important;
-    padding: 0.5em 0 !important;
+    padding: 0.2em 0 !important;
+
+    .h2 {
+      margin: 0.1em 0;
+    }
+
+    h3, p {
+      margin: 0.1em 0;
+    }
   }
 
   .profile img {
